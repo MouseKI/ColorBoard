@@ -5,7 +5,7 @@ const md = new markdownIt();
 // Define your variables
 const variables = {
   "{{title}}": "Color Set Collections",
-  "{{description}}": "Here are some of my favourite colour set collections. Hope you like it."
+  "{{description}}": "Here are some of my favourite colour set collections. Hope you like it.",
   "{{color1}}": "#0392cf"
   
 };
