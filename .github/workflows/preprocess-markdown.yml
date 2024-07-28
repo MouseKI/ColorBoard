@@ -21,8 +21,20 @@ jobs:
       with:
         node-version: '20'
 
+    - name: Display Node.js version
+      run: node -v
+
+    - name: Display npm version
+      run: npm -v
+
+    - name: Print package.json
+      run: cat package.json
+
     - name: Install dependencies
       run: npm install
+
+    - name: List installed packages
+      run: npm list
 
     - name: Preprocess Markdown
       run: node processMarkdown.js
