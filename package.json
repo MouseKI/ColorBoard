@@ -7,6 +7,6 @@
     "preprocess": "node processMarkdown.js"
   },
   "dependencies": {
-    "markdown-it": "^12.0.0"
+    "markdown-it": "^16.0.0"
   }
 }
