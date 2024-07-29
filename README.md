@@ -11,7 +11,6 @@
 - ![#3357FF](https://via.placeholder.com/15/3357FF/000000?text=+) `#3357FF`
 
 ### Secondary Colors
-- <span style="color: #FF33A6;">&#9632;</span> `#FF33A6`
-- <span style="color: #A633FF;">&#9632;</span> `#A633FF`
-- <span style="color: #33FFA6;">&#9632;</span> `#33FFA6`
+- <span style="color: #FF33A6;">Apple</span>
+- <span style="color: #A633FF;background: white">banana</span>
 
