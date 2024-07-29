@@ -4,13 +4,22 @@
 # Date: 2024 / 07
 #------------------------------------------------------------------------------------------------------------
 
-import nbformat
+import nbformat as nbf
+
+# Create a new notebook object
+nb = nbf.v4.new_notebook()
 
 # Define your variables
-variables = {
-    "{{title}}": "Color Set Collections",
-    "{{description}}": "Here are some of my favourite colour set collections. Hope you like it."
-}
+text = """\
+# <center><span style="color:#0392cf">Color Set Collections</span></center>
+Here are some of my favourite colour set collections. Hope you like it.
+"""
+
+# Add cells to the notebook
+nb['cells'] = [
+    nbf.v4.new_markdown_cell('# <center></span><span style="color:#0392cf">Color Set Collections</span></center>'),
+    nbf.v4.new_markdown_cell('#### <b>Description:</b> Here are some of my favourite colour set collections. Hope you like it.\n\n---'),
+]
 
 color_set = {
     "four_color_collection" : {
@@ -38,9 +47,12 @@ color_set = {
     }
 }
 
+def createSpanTag(text, colorHEX, background):
+    return f'<span style="color:{colorHEX}; background:{background};">{text}</span>'
+
 # Load the Jupyter Notebook
-with open('notebook.ipynb', 'r', encoding='utf-8') as f:
-    nb = nbformat.read(f, as_version=4)
+with open('ColorBoard.ipynb', 'r', encoding='utf-8') as f:
+    nb = nbf.read(f, as_version=4)
 
 # Function to replace variables in Markdown cells
 def replace_variables_in_markdown(cell):
@@ -53,7 +65,7 @@ def replace_variables_in_markdown(cell):
 nb.cells = [replace_variables_in_markdown(cell) for cell in nb.cells]
 
 # Save the modified notebook
-with open('modified_notebook.ipynb', 'w', encoding='utf-8') as f:
-    nbformat.write(nb, f)
+with open('ColorBoard.ipynb', 'w', encoding='utf-8') as f:
+    nbf.write(nb, f)
 
-print("Notebook has been modified and saved as 'modified_notebook.ipynb'")
+print("Notebook has been modified and saved as 'ColorBoard.ipynb'")
