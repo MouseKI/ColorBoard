@@ -1,18 +1,9 @@
-<h1 align="center">{{title}}</h1>
+# My Project
 
-{{description}}
----
+This is a normal text.
 
-# Color Collection
+<span style="color: red;">This text is red.</span>
 
-### Primary Colors
-- ![#FF5733](https://via.placeholder.com/15/FF5733/000000?text=+) `#FF5733`
-- ![#33FF57](https://via.placeholder.com/15/33FF57/000000?text=+) `#33FF57`
-- ![#3357FF](https://via.placeholder.com/15/3357FF/000000?text=+) `#3357FF`
+<span style="color: blue;">This text is blue.</span>
 
-### Secondary Colors
-<span style="color: #FF5733;">#FF5733</span>
-
-<span style="color: #33FF57;">#33FF57</span>
-
-<span style="color: #3357FF;">#3357FF</span>
+<span style="color: green;">This text is green.</span>
