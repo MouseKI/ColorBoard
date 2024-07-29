@@ -3,6 +3,15 @@
 {{description}}
 ---
 
-| No | Color | Text Sample | Text Highlight | Text Over White |
-|:----:|:---:|:---:|:---:|:---:|
-| <span style="color:#0392cf"> 1 </span> | <span style="color:#0392cf"> #0392cf </span> | <span style="color:#0392cf"> 样例文案 abcd <b>ABCD</b> <i>1234</i> </span> | <span style="background:#0392cf"> 样例文案 abcd <b>ABCD</b> <i>1234</i> </span> | <span style="color:#0392cf; background:white"> 样例文案 abcd <b>ABCD</b> <i>1234</i> </span> |
+# Color Collection
+
+### Primary Colors
+- ![#FF5733](https://via.placeholder.com/15/FF5733/000000?text=+) `#FF5733`
+- ![#33FF57](https://via.placeholder.com/15/33FF57/000000?text=+) `#33FF57`
+- ![#3357FF](https://via.placeholder.com/15/3357FF/000000?text=+) `#3357FF`
+
+### Secondary Colors
+- <span style="color: #FF33A6;">&#9632;</span> `#FF33A6`
+- <span style="color: #A633FF;">&#9632;</span> `#A633FF`
+- <span style="color: #33FFA6;">&#9632;</span> `#33FFA6`
+
