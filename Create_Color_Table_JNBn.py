@@ -13,7 +13,7 @@ nb = nbf.v4.new_notebook()
 title = '# <center><span style="color:#0392cf"><b>Color Set Collections</b></span></center>'
 description = '<b>Description:</b> Here are some of my favourite colour set collections. Hope you like it.\n\n---'
 
-section_tag = '## <span style="color:#ff6453">颜色标签表</span>'
+section_tag = '## <span style="color:#ff6453"><b>颜色标签表</b></span>'
 table_header = "| No | Color | Text Sample | Text Highlight | Text Over White |"
 table_align = "|:----:|:---:|:---:|:---:|:---:|"
 text_sample = "样例文案 abcd <b>ABCD</b> <i>1234</i>"
@@ -53,7 +53,7 @@ def createColorTable(colorList):
         table_content = "\n\n" + table_header + "\n" + table_align + "\n"
         for i in range(len(colorList)):
             table_content += f"| {createSpanTag(text = i+1)} | {createSpanTag(text = colorList[i], colorHEX=colorList[i])} | {createSpanTag(text = text_sample, colorHEX=colorList[i])} | {createSpanTag(text = text_sample, background = colorList[i])} | {createSpanTag(text = text_sample, colorHEX = colorList[i], background = 'white')} |\n"
-        table_content += "\n---"
+        # table_content += "\n---"
     return table_content
 
 
@@ -67,12 +67,13 @@ nb['cells'] = [
 
 for (key, val) in color_set.items():
     # create section header markdown
-    newCell = nbf.v4.new_markdown_cell("### " + createSpanTag(text=key.replace('_'," "), colorHEX="#58b849"))
+    newCell = nbf.v4.new_markdown_cell("### " + "<b>" + createSpanTag(text=key.replace('_'," "), colorHEX="#58b849") + "</b>")
     # Append the new Markdown cell to the notebook
     nb.cells.append(newCell)
     for (subK, cSet) in val.items():
         newCell = nbf.v4.new_markdown_cell(createColorTable(cSet))
         nb.cells.append(newCell)
+    nb.cells.append(nbf.v4.new_markdown_cell("---"))
 
 
 # for (k,v) in color_set.items():
