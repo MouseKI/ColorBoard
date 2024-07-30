@@ -75,14 +75,8 @@ for (key, val) in color_set.items():
         nb.cells.append(newCell)
     nb.cells.append(nbf.v4.new_markdown_cell("---"))
 
-
-# for (k,v) in color_set.items():
-#     print(k.replace('_'," ") + ": ")
-#     for (subK, cSet) in v.items():
-#         print(createColorTable(cSet))
-
 # Save the modified notebook
 with open('ColorBoard.ipynb', 'w+', encoding='utf-8') as f:
     nbf.write(nb, f)
 
-print("\tSucceeded! Notebook has been modified and saved as 'ColorBoard.ipynb'")
+print("\tSucceeded! Saved as 'ColorBoard.ipynb'")
